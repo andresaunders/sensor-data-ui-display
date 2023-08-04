@@ -29,7 +29,7 @@ I would change direction input from being a text input to a dropdown menu, which
 
 I would implement pagination for vieweing sensor data in fixed window sizes instead of scrolling through all of the data.
 
-I woudld icons for the buttons instead of text to be more user friendly
+I would use icons for the buttons instead of text to be more user friendly
 
 I would improve the editing workflow to be more intuitive
 
