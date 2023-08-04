@@ -16,6 +16,9 @@ This project was made with React
 ## Features
 Search for sensors by name, location, and/or metadata
 
+## Video Demo
+https://youtu.be/oTSCOCDzi6Q
+
 ## Future Directions
 
 For future work, I would add more tests, and also more comprehensive input validation. 
