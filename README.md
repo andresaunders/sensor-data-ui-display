@@ -1,7 +1,7 @@
 # SensorData UI Project
 
 ## Description
-This is a single page application designed to dispaly, and update sensor data
+This is a single page application designed to display, and update sensor data
 
 ### Usage
 To edit sensor data, click anywhere on the sensor's row.
