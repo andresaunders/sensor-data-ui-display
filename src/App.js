@@ -13,22 +13,40 @@ import {
   validateLocation
 } from './sensors';
 
+/*
+  This function specifies the format of the mouse when hovering over an element
 
+  return: [String] 
+*/
 function cursor(){
 
   return  'pointer';
 }
 
+/*
+  This function changes the cursor to be a pointer when hovering over an element
+
+  param: element [HTML] - Element the mouse is hovering over
+*/
 function onMouseOverListener({element}){
 
   element.style.cursor = cursor();
 }
 
+/*
+  This function changes the cursor from a pointer to a normal cursor when not hovering over an element
+
+  param: element [HTML] - Element the mosue was hovering over
+*/
 function onMouseOutListener({element}){
 
   element.style.cursor = 'default';
 }
 
+/*
+  This is the react component - a button designed so when user clicks on it, the UI
+  adds a new row at the top of the list of sensor data
+*/
 function AddButton({style, setSensorData, getSensorData}){
 
   function handleButtonClick(){
@@ -65,6 +83,9 @@ function AddButton({style, setSensorData, getSensorData}){
   )
 }
 
+/*
+  This is a react component - when the user clicks on it, it deletes sensor data rows from the UI
+*/
 function DeleteButton({style, getSensorData, setSensorData, getDeleteIndices, setDeleteIndices}){
 
   function handleButtonClick(){
@@ -90,10 +111,12 @@ function DeleteButton({style, getSensorData, setSensorData, getDeleteIndices, se
   }
 
 
+
   function handleMouseOver(e){
 
     return onMouseOverListener({element: e.target});
   }
+
 
   function handleMouseOut(e){
 
@@ -115,6 +138,9 @@ function DeleteButton({style, getSensorData, setSensorData, getDeleteIndices, se
 }
 
 
+/*
+  This is a React component - when not in edit mode, it displays the add and delete buttons
+*/
 function Header({setSensorData, getSensorData, setDeleteIndices, getDeleteIndices}){
 
   const header_style = {
@@ -151,6 +177,10 @@ function Header({setSensorData, getSensorData, setDeleteIndices, getDeleteIndice
 }
 
 
+/*
+  This is a React component - it displays the data for a given sensor.
+  Clicking on the indivudal elements in the row allows a user to edit the data for that sensor
+*/
 function SensorDataRow({
   setEditMode,
   setEditIndex,
@@ -322,6 +352,9 @@ function SensorDataRow({
 
 }
 
+/*
+  This is a React component - it displays the data for each of the filtering matching sensors
+*/
 function SensorDataDisplay({
   setEditMode,
   setEditIndex,
@@ -447,6 +480,9 @@ function SensorDataDisplay({
   )
 }
 
+/*
+  This is a React component - it displays the data for a single sensor and allows the user to edit the data
+*/
 function EditSensorDataRow({index, getSensorData, setSensorData, setEditMode}){
 
   let sensor_data = getSensorData();
@@ -700,6 +736,9 @@ function EditSensorDataRow({index, getSensorData, setSensorData, setEditMode}){
   </>)
 }
 
+/*
+  This is a React component - it displays either a single row of data to edit, or all the rows of sensor data
+*/
 function App() {
 
   const [sensor_data, setSensorData] = useState(createTestSensorData({}));
