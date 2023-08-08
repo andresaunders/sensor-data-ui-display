@@ -33,4 +33,3 @@ I would use icons for the buttons instead of text to be more user friendly
 
 I would improve the editing workflow to be more intuitive
 
-I would comment each function to ensure anyone reading the code understood the decisions made
